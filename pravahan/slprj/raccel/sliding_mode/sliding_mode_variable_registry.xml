@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="3342571a-a6d3-4060-8108-acbdbbd59467">
+    <blockParameters type="slsa.mm.param.graph.BlockParameter" uuid="8084acdd-e26a-4bcd-8b9d-31185b8d31cf">
+      <blockPath>sliding_mode/Sliding Mode Controller (Reaching Law)/f(x)</blockPath>
+      <parameterName>PortDimensions</parameterName>
+      <expression type="slsa.mm.param.graph.Expression" uuid="1bae97a7-0842-4dda-af62-1cf5ea2dbf16"/>
+      <needsEvaluationResult>false</needsEvaluationResult>
+      <tunabilityType>Nontunable</tunabilityType>
+    </blockParameters>
+    <blockParameters type="slsa.mm.param.graph.BlockParameter" uuid="985a5609-7161-4f4e-98dc-2d7da9917272">
+      <blockPath>sliding_mode/Sliding Mode Controller (Reaching Law)/x</blockPath>
+      <parameterName>PortDimensions</parameterName>
+      <expression type="slsa.mm.param.graph.Expression" uuid="1bae97a7-0842-4dda-af62-1cf5ea2dbf16"/>
+      <needsEvaluationResult>false</needsEvaluationResult>
+      <tunabilityType>Nontunable</tunabilityType>
+    </blockParameters>
+    <expressions type="slsa.mm.param.graph.Expression" uuid="1bae97a7-0842-4dda-af62-1cf5ea2dbf16">
+      <expression>[size(SlidingMatrix,1) 1]</expression>
+      <users type="slsa.mm.param.graph.BlockParameter" uuid="8084acdd-e26a-4bcd-8b9d-31185b8d31cf"/>
+      <users type="slsa.mm.param.graph.BlockParameter" uuid="985a5609-7161-4f4e-98dc-2d7da9917272"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="e0aad61b-2e4c-4f94-818f-c514d4396da9"/>
+    </expressions>
+    <expressions type="slsa.mm.param.graph.Expression" uuid="0b9cb6bf-b541-4fdf-952c-e6162be2c977">
+      <expression>[1 0;1 0;0 1;0 1]</expression>
+      <users type="slsa.mm.param.graph.VariableDefinition" uuid="7478632a-2b6a-4e97-93d4-2bd0180509c0"/>
+    </expressions>
+    <name>sliding_mode</name>
+    <variableDefinitions type="slsa.mm.param.graph.VariableDefinition" uuid="7478632a-2b6a-4e97-93d4-2bd0180509c0">
+      <variable type="slsa.mm.param.graph.Variable" uuid="e0aad61b-2e4c-4f94-818f-c514d4396da9"/>
+      <expression type="slsa.mm.param.graph.Expression" uuid="0b9cb6bf-b541-4fdf-952c-e6162be2c977"/>
+    </variableDefinitions>
+    <variables type="slsa.mm.param.graph.Variable" uuid="e0aad61b-2e4c-4f94-818f-c514d4396da9">
+      <definition type="slsa.mm.param.graph.VariableDefinition" uuid="7478632a-2b6a-4e97-93d4-2bd0180509c0"/>
+      <expressions type="slsa.mm.param.graph.Expression" uuid="1bae97a7-0842-4dda-af62-1cf5ea2dbf16"/>
+      <name>SlidingMatrix</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="960b640b-0af1-41d1-a8eb-f05d3648c7c9"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="960b640b-0af1-41d1-a8eb-f05d3648c7c9">
+      <name>sliding_mode/Sliding Mode Controller (Reaching Law)</name>
+      <type>MASK</type>
+      <variables type="slsa.mm.param.graph.Variable" uuid="e0aad61b-2e4c-4f94-818f-c514d4396da9"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="38a0e373-1875-41a8-a4ff-605610552b0f"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

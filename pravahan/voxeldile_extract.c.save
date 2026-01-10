@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv){
+	char filename[] = argv[1];
+	char bfilename[] = "";
+	for (int i = 0; i < size(filename);i ++){
+		
+	}
+	return 0;
+}

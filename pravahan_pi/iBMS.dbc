@@ -1,0 +1,555 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS
+
+
+BO_ 352 VCU_BMS_160: 8 BMS
+ SG_ VCU_UrgencyCutOffPowerReq : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_PowerOnReq : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 481 BMS_VcuUdan_1E1: 8 BMS
+ SG_ BMS_DisplaySOC : 55|16@0+ (0.1,0) [0|6553.5] "%" Vector__XXX
+ SG_ BMS_SOC : 39|16@0+ (0.1,0) [0|6553.5] "%" Vector__XXX
+ SG_ BMS_CurBat : 23|16@0- (0.1,-1000) [0|65535] "A" Vector__XXX
+ SG_ BMS_VolBat : 7|16@0+ (0.1,0) [0|65535] "V" Vector__XXX
+
+BO_ 484 BMS_UDAN_1E4: 8 BMS
+ SG_ BMS_PowerOnReady : 57|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_AlarmLevel : 55|8@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_NegativeInsulationResistance : 55|16@0+ (1,0) [0|65535] "kohm" Vector__XXX
+ SG_ BMS_PositiveInsulationResistance : 39|16@0+ (1,0) [0|65535] "kohm" Vector__XXX
+ SG_ BMS_HighVolLoopLockStatus : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RefrigerationStatus : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_HeatingStatus : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_BalanceStatus : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_SelfCheckStatus : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_PerchargeStatus : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_ChargeStatus : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_ChargeMode : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 499 BMS_UdanObcMcu_1F3: 8 BMS
+ SG_ BMS_PowerChargeContinue : 71|16@0+ (0.1,0) [0|65535] "A" Vector__XXX
+ SG_ BMS_PowerChargePeak : 55|16@0+ (0.1,0) [0|65535] "A" Vector__XXX
+ SG_ BMS_PowerDisChargeContinue : 39|16@0+ (0.1,0) [0|65535] "A" Vector__XXX
+ SG_ BMS_PowerDisChargePeak : 23|16@0- (0.1,0) [0|65535] "A" Vector__XXX
+
+BO_ 500 BMS_OBC_1F4: 8 BMS
+ SG_ BMS_ChargeControl : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_CurChargeMaxLimit : 39|16@0+ (0.1,0) [0|65535] "A" Vector__XXX
+ SG_ BMS_VolChargeMaxLimit : 23|16@0+ (0.1,0) [0|65535] "V" Vector__XXX
+
+BO_ 501 BMS_UDAN_1F5: 8 BMS
+ SG_ BMS_WarningLevel : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_WarningCode : 7|8@0+ (1,0) [0|254] "" Vector__XXX
+
+BO_ 514 BMS_SystemTime202: 8 BMS
+ SG_ System_Seconds : 55|8@0+ (1,0) [0|0] "Second" Vector__XXX
+ SG_ System_Month : 23|8@0+ (1,0) [0|255] "Month" Vector__XXX
+ SG_ System_Minute : 47|8@0+ (1,0) [0|0] "minute" Vector__XXX
+ SG_ System_Hour : 39|8@0+ (1,0) [0|0] "hour" Vector__XXX
+ SG_ System_Day : 31|8@0+ (1,0) [0|0] "day" Vector__XXX
+ SG_ System_Year : 23|16@0+ (1,0) [0|65535] "year" Vector__XXX
+
+BO_ 515 BMS_CumuTimeInfor203: 8 BMS
+ SG_ CumuTime_Charge : 39|32@0+ (0.1,0) [0|4294967295] "hour" Vector__XXX
+ SG_ CumuTime_Discharge : 23|32@0+ (0.1,0) [0|4294967295] "hour" Vector__XXX
+
+BO_ 516 BMS_CumuTimeInfor204: 8 BMS
+ SG_ CumuTime_All : 23|32@0+ (0.1,0) [0|4294967295] "hour" Vector__XXX
+
+BO_ 517 BMS_CumuTimeInfor205: 8 BMS
+ SG_ SOH : 71|16@0+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ Charge_Time : 55|16@0+ (1,0) [0|0] "min" Vector__XXX
+ SG_ Pack_LeftCap : 23|16@0+ (0.1,0) [0|6553.5] "AH" Vector__XXX
+ SG_ Pack_TotalCap : 7|16@0+ (0.1,0) [0|6553.5] "AH" Vector__XXX
+
+BO_ 518 BMS_CumuTimeInfor206: 8 BMS
+ SG_ Dchg_StartDiaFault : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dchg_DiaOtherFault : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dchg_DiaFaultFlag : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dchg_DiaFaultAction : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ SocStartDia_EmptyCalib : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ SocStartDia_FullCalib : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 519 BMS_CumuTimeInfor207: 8 BMS
+ SG_ OBC_FaultCode : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chg_DiaOtherFault : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chg_DiaFaultFlag : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chg_DiaFaultAction : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Chg_StartDiaFault : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 520 BMS_CumuTimeInfor208: 8 BMS
+ SG_ HeatCur : 23|16@0- (0.1,0) [0|1000] "A" Vector__XXX
+
+BO_ 529 BMS_UDAN_211: 8 BMS
+ SG_ BMS_BatteryPower : 55|16@0+ (0.01,-100) [0|20000] "kw" Vector__XXX
+ SG_ BMS_ChargeLeftTime : 39|16@0+ (1,0) [0|65535] "min" Vector__XXX
+ SG_ BMS_InsulationResistance : 23|16@0+ (1,0) [0|65535] "k¦¸" Vector__XXX
+
+BO_ 544 OBC_BMS_220: 8 BMS
+ SG_ OBC_Voltage : 23|16@0+ (0.1,0) [0|65535] "V" Vector__XXX
+ SG_ OBC_Temperature : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_StartStatus : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_OutputShortOut : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_InputVoltage : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_HardwareFault : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_Current : 39|16@0+ (0.1,0) [0|65535] "A" Vector__XXX
+ SG_ OBC_CommunicateStatus : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 849 BMS_BROADCAST_351: 8 BMS
+ SG_ BMS_RelayRefrigeFaultStatus : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayHeatingFaultStatus : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayDCChargeFaultStatus : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayACChargeFaultStatus : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayDischargeFaultStatus : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayPerchargeFaultStatus : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayNegativeFaultStatus : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayPositiveFaultStatus : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_RelayRefrigerationStatus : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RelayHeatingStatus : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RelayDCChargeStatus : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RelayACChargeStatus : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RelayDischargeStatus : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RelayPerchargeStatus : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RelayNegativeStatus : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_RelayPositiveStatus : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 850 BMS_UDAN_352: 8 BMS
+ SG_ BMS_CellLVMaxNum : 71|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_CellLVMax : 55|16@0+ (0.001,0) [0|65535] "" Vector__XXX
+ SG_ BMS_CellHVMaxNum : 39|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_CellHVMax : 23|16@0+ (0.001,0) [0|65535] "" Vector__XXX
+
+BO_ 851 BMS_UDAN_353: 8 BMS
+ SG_ BMS_TemperatureLTMaxNum : 55|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_TemperatureLTMax : 31|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_TemperatureHTMaxNum : 31|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_TemperatureHTMax : 7|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+
+BO_ 852 BMS_UDAN_354: 8 BMS
+ SG_ BMS_HeatingTempLTMaxNum : 55|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_HeatingTempLTMax : 31|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_HeatingTempHTMaxNum : 31|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_HeatingTempHTMax : 7|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+
+BO_ 853 BMS_UDAN_355: 8 BMS
+ SG_ BMS_PoleTempLTMaxNum : 55|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_PoleTempLTMax : 31|8@0- (1,-50) [0|255] "" Vector__XXX
+ SG_ BMS_PoleTempHTMaxNum : 31|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_PoleTempHTMax : 7|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+
+BO_ 854 BMS_UDAN_356: 8 BMS
+ SG_ BMS_CellVoltageV3 : 71|16@0+ (0.001,0) [0|65535] "V" Vector__XXX
+ SG_ BMS_CellVoltageV2 : 55|16@0+ (0.001,0) [0|65535] "V" Vector__XXX
+ SG_ BMS_CellVoltageV1 : 39|16@0+ (0.001,0) [0|65535] "V" Vector__XXX
+ SG_ BMS_CellVoltageStartNum : 23|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 855 BMS_UDAN_357: 8 BMS
+ SG_ BMS_CellTemperatureT6 : 63|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellTemperatureT5 : 55|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellTemperatureT4 : 47|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellTemperatureT3 : 39|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellTemperatureT2 : 31|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellTemperatureT1 : 23|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellTempStartNum : 23|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 856 BMS_CellExtremumIndex_358: 8 BMS
+ SG_ Statistic_CellLtMaxBmsIndex : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Statistic_CellLtMaxBatIndex : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Statistic_CellHtMaxBmsIndex : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Statistic_CellHtMaxBatIndex : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Statistic_CellLVMaxBmsIndex : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Statistic_CellLVMaxBatIndex : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Statistic_CellHVMaxBmsIndex : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Statistic_CellHVMaxBatIndex : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 864 BMS_Relay_Status360: 8 BMS
+ SG_ NO7_RelayIndex : 63|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO7_RelayStatus : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO7_RelayFaultStatus : 58|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO6_RelayStatus : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO6_RelayIndex : 55|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO6_RelayFaultStatus : 50|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO5_RelayStatus : 40|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO5_RelayIndex : 47|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO5_RelayFaultStatus : 42|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO4_RelayStatus : 32|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO4_RelayIndex : 39|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO4_RelayFaultStatus : 34|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO3_RelayStatus : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO3_RelayIndex : 31|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO3_RelayFaultStatus : 26|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO2_RelayStatus : 16|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO2_RelayIndex : 23|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO2_RelayFaultStatus : 18|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO1_RelayIndex : 15|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO1_RelayFaultStatus : 10|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO1_RelayStatus : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ RelayNum : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 865 BMS_Relay_Status361: 8 BMS
+ SG_ NO15_RelayStatus : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO15_RelayIndex : 63|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO15_RelayFaultStatus : 58|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO14_RelayStatus : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO14_RelayIndex : 55|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO14_RelayFaultStatus : 50|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO13_RelayStatus : 40|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO13_RelayIndex : 47|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO13_RelayFaultStatus : 42|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO12_RelayStatus : 32|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO12_RelayIndex : 39|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO12_RelayFaultStatus : 34|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO11_RelayStatus : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO11_RelayIndex : 31|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO11_RelayFaultStatus : 26|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO10_RelayStatus : 16|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO10_RelayIndex : 23|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO10_RelayFaultStatus : 18|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO9_RelayStatus : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO9_RelayIndex : 15|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO9_RelayFaultStatus : 10|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO8_RelayStatus : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO8_RelayIndex : 7|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NO8_RelayFaultStatus : 2|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1011 BMS_UDAN_3F3: 8 BMS
+ SG_ BMS_CellHeatingTempT6 : 63|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellHeatingTempT5 : 55|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellHeatingTempT4 : 47|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellHeatingTempT3 : 39|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellHeatingTempT2 : 31|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellHeatingTempT1 : 23|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellHeatingTempStartNum : 23|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 1012 BMS_UDAN_3F4: 8 BMS
+ SG_ BMS_CellPoleTempT6 : 63|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellPoleTempT5 : 55|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellPoleTempT4 : 47|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellPoleTempT3 : 39|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellPoleTempT2 : 31|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellPoleTempT1 : 23|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_CellPoleTempSartNum : 23|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 1013 BMS_UDAN_3F5: 8 BMS
+ SG_ BMS_CumuCapCharge : 55|32@0+ (1,0) [0|0] "AH" Vector__XXX
+ SG_ BMS_CumuCapDischarge : 23|32@0+ (1,0) [0|0] "AH" Vector__XXX
+
+BO_ 1014 BMS_UDAN_3F6: 8 BMS
+ SG_ BMS_ChargeTimes : 71|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_DeltaTemperature : 47|8@0+ (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_DeltaVoltage : 47|16@0+ (0.001,0) [0|65535] "V" Vector__XXX
+ SG_ BMS_AverageTemperature : 23|8@0- (1,-50) [0|255] "¡æ" Vector__XXX
+ SG_ BMS_AverageVoltage : 23|16@0+ (0.001,0) [0|65535] "V" Vector__XXX
+
+BO_ 1023 BMS_UDAN_3FF: 8 BMS
+ SG_ BMS_HeatTemp_Number : 71|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BMS_PoleTempNumber : 55|16@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_CellTempNumber : 39|16@0- (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_CellNumber : 23|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+
+
+CM_ SG_ 352 VCU_UrgencyCutOffPowerReq "VCUemergencypower-offrequest";
+CM_ SG_ 352 VCU_PowerOnReq "VCUhighvoltagepoweron";
+CM_ SG_ 481 BMS_DisplaySOC "SOCmeterdisplay";
+CM_ SG_ 481 BMS_SOC "Stateofcharge";
+CM_ SG_ 481 BMS_CurBat "Totalbatterycurrent";
+CM_ SG_ 481 BMS_VolBat "Totalbatteryvoltage";
+CM_ SG_ 484 BMS_PowerOnReady "BMSpower-onReadysignal";
+CM_ SG_ 484 BMS_AlarmLevel "BMShighestalarmlevel";
+CM_ SG_ 484 BMS_NegativeInsulationResistance "Negativeinsulationresistance";
+CM_ SG_ 484 BMS_PositiveInsulationResistance "Positiveinsulationresistance";
+CM_ SG_ 484 BMS_HighVolLoopLockStatus "Highvoltageinterlockstatus";
+CM_ SG_ 484 BMS_RefrigerationStatus "BMScoolingstatus";
+CM_ SG_ 484 BMS_HeatingStatus "BMSheatingstatus";
+CM_ SG_ 484 BMS_BalanceStatus "BMSbalancestatus";
+CM_ SG_ 484 BMS_SelfCheckStatus "BMSself-checkstatus";
+CM_ SG_ 484 BMS_PerchargeStatus "BMSprechargestatus";
+CM_ SG_ 484 BMS_ChargeStatus "BMScurrentchargingstatus";
+CM_ SG_ 484 BMS_ChargeMode "BMScurrentchargingmode";
+CM_ SG_ 499 BMS_PowerChargeContinue "Continuouschargingcurrent";
+CM_ SG_ 499 BMS_PowerChargePeak "Peakchargingcurrent";
+CM_ SG_ 499 BMS_PowerDisChargeContinue "Continuousdischargecurrent";
+CM_ SG_ 499 BMS_PowerDisChargePeak "Peakdischargecurrent";
+CM_ SG_ 500 BMS_CurChargeMaxLimit "Maximumallowablechargingcurrent";
+CM_ SG_ 500 BMS_VolChargeMaxLimit "Maximumallowablechargingvoltage";
+CM_ SG_ 501 BMS_WarningLevel "Alarmlevel";
+CM_ SG_ 501 BMS_WarningCode "Alarmcode";
+CM_ SG_ 514 System_Seconds "second";
+CM_ SG_ 514 System_Month "month";
+CM_ SG_ 514 System_Minute "Minute";
+CM_ SG_ 514 System_Hour "Time";
+CM_ SG_ 514 System_Day "Day";
+CM_ SG_ 514 System_Year "Year";
+CM_ SG_ 515 CumuTime_Charge "Cumulativetotalchargingtime";
+CM_ SG_ 515 CumuTime_Discharge "Cumulativetotaldischargetime";
+CM_ SG_ 516 CumuTime_All "Cumulativetotalusagetime";
+CM_ SG_ 517 SOH "SOH";
+CM_ SG_ 517 Charge_Time "Chargedtime";
+CM_ SG_ 517 Pack_LeftCap "Batterypackremainingcapacity";
+CM_ SG_ 517 Pack_TotalCap "Totalbatterycapacity";
+CM_ SG_ 518 Dchg_StartDiaFault "Dischargeself-checkfailure";
+CM_ SG_ 518 Dchg_DiaOtherFault "Dischargeotherfaults";
+CM_ SG_ 518 Dchg_DiaFaultFlag "Dischargediagnosticfaultflag";
+CM_ SG_ 518 Dchg_DiaFaultAction "Dischargediagnosisfaultaction";
+CM_ SG_ 518 SocStartDia_EmptyCalib "SOCemptydiagnosiscalibrationself-diagnosis";
+CM_ SG_ 518 SocStartDia_FullCalib "SOCfulldiagnosiscalibrationself-diagnosis";
+CM_ SG_ 519 OBC_FaultCode "Nationalstandardcommunicationfaultcode";
+CM_ SG_ 519 Chg_DiaOtherFault "Chargingotherfaults";
+CM_ SG_ 519 Chg_DiaFaultFlag "Chargingdiagnosticfailureflag";
+CM_ SG_ 519 Chg_DiaFaultAction "Chargediagnosisfaultaction";
+CM_ SG_ 519 Chg_StartDiaFault "Chargingself-checkfailure";
+CM_ SG_ 520 HeatCur "Heatingcurrent(collection)";
+CM_ SG_ 529 BMS_BatteryPower "Batterypower,positivepowermeanschargingthebattery,negativepowermeansdischargingthebattery";
+CM_ SG_ 529 BMS_ChargeLeftTime "Remainingchargingtime";
+CM_ SG_ 529 BMS_InsulationResistance "Insulationresistance";
+CM_ SG_ 544 OBC_Voltage "OBCcurrentchargingvoltage";
+CM_ SG_ 544 OBC_Temperature "Chargertemperature";
+CM_ SG_ 544 OBC_OutputShortOut "Outputshortcircuit";
+CM_ SG_ 544 OBC_InputVoltage "Inputvoltage";
+CM_ SG_ 544 OBC_HardwareFault "Hardwaremalfunction";
+CM_ SG_ 544 OBC_Current "OBCcurrentchargingcurrent";
+CM_ SG_ 544 OBC_CommunicateStatus "Communicationstatus";
+CM_ SG_ 849 BMS_RelayRefrigeFaultStatus "Refrigerationrelayfaultstatus";
+CM_ SG_ 849 BMS_RelayHeatingFaultStatus "Heatingrelayfaultstatus";
+CM_ SG_ 849 BMS_RelayDCChargeFaultStatus "Fastchargerelayfaultstatus";
+CM_ SG_ 849 BMS_RelayACChargeFaultStatus "Slowchargerelayfaultstatus";
+CM_ SG_ 849 BMS_RelayDischargeFaultStatus "Dischargerelayfaultstatus";
+CM_ SG_ 849 BMS_RelayPerchargeFaultStatus "Prechargerelayfaultstatus";
+CM_ SG_ 849 BMS_RelayNegativeFaultStatus "Mainnegativerelayfaultstatus";
+CM_ SG_ 849 BMS_RelayPositiveFaultStatus "Mainpositiverelayfaultstatus";
+CM_ SG_ 849 BMS_RelayRefrigerationStatus "Refrigerationrelaystatus";
+CM_ SG_ 849 BMS_RelayHeatingStatus "Heatingrelaystatus";
+CM_ SG_ 849 BMS_RelayDCChargeStatus "Fastchargerelaystatus";
+CM_ SG_ 849 BMS_RelayACChargeStatus "Slowchargerelaystatus";
+CM_ SG_ 849 BMS_RelayDischargeStatus "Dischargerelaystatus";
+CM_ SG_ 849 BMS_RelayPerchargeStatus "Pre-chargerstatus";
+CM_ SG_ 849 BMS_RelayNegativeStatus "Mainnegativerelaystatus";
+CM_ SG_ 849 BMS_RelayPositiveStatus "Mainpositiverelaystatus";
+CM_ SG_ 850 BMS_CellLVMaxNum "Thelowestsinglecellvoltageserialnumberofthebattery";
+CM_ SG_ 850 BMS_CellLVMax "Minimumbatterysinglecellvoltage";
+CM_ SG_ 850 BMS_CellHVMaxNum "Thehighestsinglecellvoltageserialnumberofthebattery";
+CM_ SG_ 850 BMS_CellHVMax "Maximumsinglecellvoltageofbattery";
+CM_ SG_ 851 BMS_TemperatureLTMaxNum "Minimumbatterytemperaturenumber";
+CM_ SG_ 851 BMS_TemperatureLTMax "Minimumbatterytemperature";
+CM_ SG_ 851 BMS_TemperatureHTMaxNum "Maximumbatterytemperaturenumber";
+CM_ SG_ 851 BMS_TemperatureHTMax "Maximumbatterytemperature";
+CM_ SG_ 852 BMS_HeatingTempLTMaxNum "Heatingtemperaturelowesttemperaturenumber";
+CM_ SG_ 852 BMS_HeatingTempLTMax "Minimumheatingtemperature";
+CM_ SG_ 852 BMS_HeatingTempHTMaxNum "Heatingtemperaturehighesttemperaturenumber";
+CM_ SG_ 852 BMS_HeatingTempHTMax "Maximumheatingtemperature";
+CM_ SG_ 853 BMS_PoleTempLTMaxNum "Thelowesttemperatureofthepoletemperaturesensor";
+CM_ SG_ 853 BMS_PoleTempLTMax "Thelowesttemperatureofthepoletemperature";
+CM_ SG_ 853 BMS_PoleTempHTMaxNum "Maximumtemperaturenumberofpoletemperaturesensor";
+CM_ SG_ 853 BMS_PoleTempHTMax "Maximumtemperatureofpoletemperature";
+CM_ SG_ 854 BMS_CellVoltageV3 "Startingserialnumber+2singlecellvoltagevalue";
+CM_ SG_ 854 BMS_CellVoltageV2 "Startingserialnumber+1singlecellvoltagevalue";
+CM_ SG_ 854 BMS_CellVoltageV1 "Startingserialnumbersinglecellvoltagevalue";
+CM_ SG_ 854 BMS_CellVoltageStartNum "Startingsinglecellvoltageserialnumber";
+CM_ SG_ 855 BMS_CellTemperatureT6 "Startingtemperatureserialnumber+5temperaturevalue";
+CM_ SG_ 855 BMS_CellTemperatureT5 "Startingtemperatureserialnumber+4temperaturevalue";
+CM_ SG_ 855 BMS_CellTemperatureT4 "Startingtemperatureserialnumber+3temperaturevalue";
+CM_ SG_ 855 BMS_CellTemperatureT3 "Startingtemperatureserialnumber+2temperaturevalue";
+CM_ SG_ 855 BMS_CellTemperatureT2 "Startingtemperatureserialnumber+1temperaturevalue";
+CM_ SG_ 855 BMS_CellTemperatureT1 "Startingtemperatureserialnumbertemperaturevalue";
+CM_ SG_ 855 BMS_CellTempStartNum "Startingbatterytemperatureserialnumber";
+CM_ SG_ 856 Statistic_CellLtMaxBmsIndex "Thelowestbatterytemperatureslavenumber";
+CM_ SG_ 856 Statistic_CellLtMaxBatIndex "Thelowestbatterytemperatureslaveserialnumber";
+CM_ SG_ 856 Statistic_CellHtMaxBmsIndex "Maximumbatterytemperatureslavenumber";
+CM_ SG_ 856 Statistic_CellHtMaxBatIndex "Thehighestbatterytemperatureslaveserialnumber";
+CM_ SG_ 856 Statistic_CellLVMaxBmsIndex "Theminimumbatterysinglecellvoltageslavenumber";
+CM_ SG_ 856 Statistic_CellLVMaxBatIndex "Theminimumsinglecellvoltageofthebatteryisfromtheserialnumber";
+CM_ SG_ 856 Statistic_CellHVMaxBmsIndex "Thehighestbatterysinglecellvoltageslavenumber";
+CM_ SG_ 856 Statistic_CellHVMaxBatIndex "Thehighestsinglecellvoltageofthebatteryslaveserialnumber";
+CM_ SG_ 864 NO7_RelayIndex "No.7relayindexnumber";
+CM_ SG_ 864 NO7_RelayStatus "7ºÅ¼ÌµçÆ÷×´Ì¬";
+CM_ SG_ 864 NO7_RelayFaultStatus "No.7relayfaultstatus";
+CM_ SG_ 864 NO6_RelayStatus "No.6relaystatus";
+CM_ SG_ 864 NO6_RelayIndex "No.6relayindexnumber";
+CM_ SG_ 864 NO6_RelayFaultStatus "No.6relayfaultstatus";
+CM_ SG_ 864 NO5_RelayStatus "No.5relaystatus";
+CM_ SG_ 864 NO5_RelayIndex "No.5relayindexnumber";
+CM_ SG_ 864 NO5_RelayFaultStatus "No.5relayfaultstatus";
+CM_ SG_ 864 NO4_RelayStatus "No.4relaystatus";
+CM_ SG_ 864 NO4_RelayIndex "No.4relayindexnumber";
+CM_ SG_ 864 NO4_RelayFaultStatus "No.4relayfaultstatus";
+CM_ SG_ 864 NO3_RelayStatus "No.3relaystatus";
+CM_ SG_ 864 NO3_RelayIndex "No.3relayindexnumber";
+CM_ SG_ 864 NO3_RelayFaultStatus "No.3relayfaultstatus";
+CM_ SG_ 864 NO2_RelayStatus "No.2relaystatus";
+CM_ SG_ 864 NO2_RelayIndex "No.2relayindexnumber";
+CM_ SG_ 864 NO2_RelayFaultStatus "No.2relayfaultstatus";
+CM_ SG_ 864 NO1_RelayIndex "No.1relayindexnumber";
+CM_ SG_ 864 NO1_RelayFaultStatus "1ºÅ¼ÌµçÆ÷¹ÊÕÏ×´Ì¬";
+CM_ SG_ 864 NO1_RelayStatus "No.1relaystatus";
+CM_ SG_ 864 RelayNum "Totalnumberofrelays";
+CM_ SG_ 865 NO15_RelayStatus "No.15relaystatus";
+CM_ SG_ 865 NO15_RelayIndex "No.15relayindexnumber";
+CM_ SG_ 865 NO15_RelayFaultStatus "No.15relayfaultstatus";
+CM_ SG_ 865 NO14_RelayStatus "No.14relaystatus";
+CM_ SG_ 865 NO14_RelayIndex "No.14relayindexnumber";
+CM_ SG_ 865 NO14_RelayFaultStatus "No.14relayfaultstatus";
+CM_ SG_ 865 NO13_RelayStatus "No.13relaystatus";
+CM_ SG_ 865 NO13_RelayIndex "No.13relayindexnumber";
+CM_ SG_ 865 NO13_RelayFaultStatus "No.13relayfaultstatus";
+CM_ SG_ 865 NO12_RelayStatus "No.12relaystatus";
+CM_ SG_ 865 NO12_RelayIndex "No.12relayindexnumber";
+CM_ SG_ 865 NO12_RelayFaultStatus "No.12relayfaultstatus";
+CM_ SG_ 865 NO11_RelayStatus "No.11relaystatus";
+CM_ SG_ 865 NO11_RelayIndex "No.11relayindexnumber";
+CM_ SG_ 865 NO11_RelayFaultStatus "No.11relayfaultstatus";
+CM_ SG_ 865 NO10_RelayStatus "No.10relaystatus";
+CM_ SG_ 865 NO10_RelayIndex "No.10relayindexnumber";
+CM_ SG_ 865 NO10_RelayFaultStatus "No.10relayfaultstatus";
+CM_ SG_ 865 NO9_RelayStatus "No.9relaystatus";
+CM_ SG_ 865 NO9_RelayIndex "No.9relayindexnumber";
+CM_ SG_ 865 NO9_RelayFaultStatus "No.9relayfaultstatus";
+CM_ SG_ 865 NO8_RelayStatus "No.8relaystatus";
+CM_ SG_ 865 NO8_RelayIndex "No.8relayindexnumber";
+CM_ SG_ 865 NO8_RelayFaultStatus "No.8relayfaultstatus";
+CM_ SG_ 1011 BMS_CellHeatingTempT6 "Staringheatingtemperatureserialnumber+5temperaturevalue";
+CM_ SG_ 1011 BMS_CellHeatingTempT5 "Staringheatingtemperatureserialnumber+4temperaturevalue";
+CM_ SG_ 1011 BMS_CellHeatingTempT4 "Staringheatingtemperatureserialnumber+4temperaturevalue";
+CM_ SG_ 1011 BMS_CellHeatingTempT3 "Staringheatingtemperatureserialnumber+2temperaturevalue";
+CM_ SG_ 1011 BMS_CellHeatingTempT2 "Staringheatingtemperatureserialnumber+1temperaturevalue";
+CM_ SG_ 1011 BMS_CellHeatingTempT1 "Staringheatingtemperatureserialnumbertemperaturevalue";
+CM_ SG_ 1011 BMS_CellHeatingTempStartNum "Staringheatingtemperatureserialnumber";
+CM_ SG_ 1012 BMS_CellPoleTempT6 "Startingpoletemperatureserialnumber+5temperaturevalue";
+CM_ SG_ 1012 BMS_CellPoleTempT5 "Startingpoletemperatureserialnumber+4temperaturevalue";
+CM_ SG_ 1012 BMS_CellPoleTempT4 "Startingpoleserialnumbertemperature+3temperaturevalue";
+CM_ SG_ 1012 BMS_CellPoleTempT3 "Startingpoletemperatureserialnumber+2temperaturevalue";
+CM_ SG_ 1012 BMS_CellPoleTempT2 "Startingpoletemperatureserialnumber+1temperaturevalue";
+CM_ SG_ 1012 BMS_CellPoleTempT1 "Startingpoletemperatureserialnumbertemperaturevalue";
+CM_ SG_ 1012 BMS_CellPoleTempSartNum "Startingpoletemperatureserialnumber";
+CM_ SG_ 1013 BMS_CumuCapCharge "Cumulativetotalchargingcapacity";
+CM_ SG_ 1013 BMS_CumuCapDischarge "Cumulativetotaldischargecapacity";
+CM_ SG_ 1014 BMS_ChargeTimes "Batterypackchargeanddischargetimes";
+CM_ SG_ 1014 BMS_DeltaTemperature "Maximumtemperaturedifferenceofbatterypack";
+CM_ SG_ 1014 BMS_DeltaVoltage "Maximumpressuredifferenceofbatterypack";
+CM_ SG_ 1014 BMS_AverageTemperature "Averagetemperatureofbatterypack";
+CM_ SG_ 1014 BMS_AverageVoltage "Averagebatteryvoltageofbatterypack";
+CM_ SG_ 1023 BMS_HeatTemp_Number "Numberofheatingtemperaturesensors";
+CM_ SG_ 1023 BMS_PoleTempNumber "Numberofpoletemperaturesensors";
+CM_ SG_ 1023 BMS_CellTempNumber "Numberofsingletemperaturesensors";
+CM_ SG_ 1023 BMS_CellNumber "Numberofsinglebatterystring";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 352 VCU_UrgencyCutOffPowerReq 1 "Requestforhighvoltage" 0 "Notrequested" ;
+VAL_ 352 VCU_PowerOnReq 1 "Requesthighvoltage" 0 "requesthighvoltage" ;
+VAL_ 484 BMS_PowerOnReady 3 "reserved" 2 "error" 1 "ready" 0 "Notprepared" ;
+VAL_ 484 BMS_AlarmLevel 255 "invalid" 254 "abnormal" 3 "Level3fault,immediateshutdownisrequired" 2 "Level2fault,requiringthedrivertorestrictdriving" 1 "Level1fault,doesnotaffectthenormaldrivingofthevehicle" 0 "Nofault" ;
+VAL_ 484 BMS_HighVolLoopLockStatus 1 "Interlocking" 0 "notinterlocked" ;
+VAL_ 484 BMS_RefrigerationStatus 1 "Cooling" 0 "Uncooled" ;
+VAL_ 484 BMS_HeatingStatus 1 "Heating" 0 "Notheated" ;
+VAL_ 484 BMS_BalanceStatus 1 "balancing" 0 "unbalanced" ;
+VAL_ 484 BMS_SelfCheckStatus 3 "reserved" 2 "Self-checkfailed" 1 "Self-checkcompleted" 0 "self-checking" ;
+VAL_ 484 BMS_PerchargeStatus 3 "Prechargefailed" 2 "Prechargecompleted" 1 "Pre-chargeing" 0 "Notprecharged" ;
+VAL_ 484 BMS_ChargeStatus 3 "reserved" 2 "Chargingcompleted" 1 "Charging" 0 "Notcharged" ;
+VAL_ 484 BMS_ChargeMode 3 "reserved" 2 "ACmode" 1 "DCmode" 0 "Notcharged" ;
+VAL_ 500 BMS_ChargeControl 1 "Chargingprohibited" 0 "Allowcharging" ;
+VAL_ 501 BMS_WarningLevel 255 "invalid" 254 "abnormal" 4 "Level4fault" 3 "Level3fault" 2 "Level2fault" 1 "Level1fault" 0 "Nofault" ;
+VAL_ 501 BMS_WarningCode 255 "Nofault" 156 "collisionfailure" 155 "Abnormalpowersupplyvoltage" 154 "Thetemperaturesensenumberdoesnotmatch" 153 "Thenumberofbatteriesdoesnotmatch" 152 "Multi-chargingconnectionfailure" 151 "Electroniclockfailure" 150 "Thetemperatureofthepoleisabnormal" 149 "Abnormalheatingtemperature" 148 "CPconnectionfailure" 147 "CCconnectionfailure" 146 "CC2connectionfailure" 145 "Heatingfailure" 144 "Relayfailure" 143 "HVILfailure" 142 "BMSinitializationfailure" 141 "Abnormalcurrent" 140 "Prechargefailed" 139 "Abnormaltemperatureinthechargingsocket" 138 "Fullychargedandcutoff" 137 "Thevehiclecommunicationisinterrupted" 136 "Thechargercommunicationisinterrupted" 135 "ACchargingphaseCsockettemperature" 134 "ACchargingphaseBLseattemperature" 133 "ACchargingphaseALsockettemperature" 132 "DCchargingnegativesockettemperature" 131 "DCchargingsockettemperature" 130 "Intranetcommunication" 129 "Temperaturesensorcable" 128 "Voltagecable" 127 "Descriptionforthevalue'0x7F'" 126 "Descriptionforthevalue'0x7E'" 125 "Descriptionforthevalue'0x7D'" 124 "Descriptionforthevalue'0x7C'" 123 "Descriptionforthevalue'0x7B'" 122 "Descriptionforthevalue'0x7A'" 121 "Descriptionforthevalue'0x79'" 120 "Descriptionforthevalue'0x78'" 119 "Descriptionforthevalue'0x77'" 118 "Descriptionforthevalue'0x76'" 117 "Descriptionforthevalue'0x75'" 116 "Descriptionforthevalue'0x74'" 115 "Descriptionforthevalue'0x73'" 114 "Descriptionforthevalue'0x72'" 113 "Descriptionforthevalue'0x71'" 112 "Descriptionforthevalue'0x70'" 111 "Descriptionforthevalue'0x6F'" 110 "Descriptionforthevalue'0x6E'" 109 "Descriptionforthevalue'0x6D'" 108 "Descriptionforthevalue'0x6C'" 107 "Descriptionforthevalue'0x6B'" 106 "Descriptionforthevalue'0x6A'" 105 "Descriptionforthevalue'0x69'" 104 "Descriptionforthevalue'0x68'" 103 "Descriptionforthevalue'0x67'" 102 "Descriptionforthevalue'0x66'" 101 "Descriptionforthevalue'0x65'" 100 "Descriptionforthevalue'0x64'" 99 "Descriptionforthevalue'0x63'" 98 "Descriptionforthevalue'0x62'" 97 "Descriptionforthevalue'0x61'" 96 "Descriptionforthevalue'0x60'" 95 "Descriptionforthevalue'0x5F'" 94 "Descriptionforthevalue'0x5E'" 93 "Descriptionforthevalue'0x5D'" 92 "Descriptionforthevalue'0x5C'" 91 "Descriptionforthevalue'0x5B'" 90 "Descriptionforthevalue'0x5A'" 89 "Descriptionforthevalue'0x59'" 88 "Descriptionforthevalue'0x58'" 87 "Descriptionforthevalue'0x57'" 86 "Descriptionforthevalue'0x56'" 85 "Descriptionforthevalue'0x55'" 84 "Descriptionforthevalue'0x54'" 83 "Descriptionforthevalue'0x53'" 82 "Descriptionforthevalue'0x52'" 81 "Descriptionforthevalue'0x51'" 80 "Descriptionforthevalue'0x50'" 79 "Descriptionforthevalue'0x4F'" 78 "Descriptionforthevalue'0x4E'" 77 "Descriptionforthevalue'0x4D'" 76 "Descriptionforthevalue'0x4C'" 75 "Descriptionforthevalue'0x4B'" 74 "Descriptionforthevalue'0x4A'" 73 "Descriptionforthevalue'0x49'" 72 "Descriptionforthevalue'0x48'" 71 "Descriptionforthevalue'0x47'" 70 "Descriptionforthevalue'0x46'" 69 "Descriptionforthevalue'0x45'" 68 "Descriptionforthevalue'0x44'" 67 "Descriptionforthevalue'0x43'" 66 "Descriptionforthevalue'0x42'" 65 "Descriptionforthevalue'0x41'" 64 "Descriptionforthevalue'0x40'" 63 "Descriptionforthevalue'0x3F'" 62 "Descriptionforthevalue'0x3E'" 61 "Descriptionforthevalue'0x3D'" 60 "Descriptionforthevalue'0x3C'" 59 "Descriptionforthevalue'0x3B'" 58 "Descriptionforthevalue'0x3A'" 57 "Descriptionforthevalue'0x39'" 56 "Descriptionforthevalue'0x38'" 55 "Descriptionforthevalue'0x37'" 54 "Descriptionforthevalue'0x36'" 53 "Descriptionforthevalue'0x35'" 52 "Descriptionforthevalue'0x34'" 51 "Descriptionforthevalue'0x33'" 50 "Descriptionforthevalue'0x32'" 49 "Descriptionforthevalue'0x31'" 48 "Descriptionforthevalue'0x30'" 47 "Descriptionforthevalue'0x2F'" 46 "Descriptionforthevalue'0x2E'" 45 "Descriptionforthevalue'0x2D'" 44 "Descriptionforthevalue'0x2C'" 43 "Descriptionforthevalue'0x2B'" 42 "Descriptionforthevalue'0x2A'" 41 "Thesupplyvoltageistoohigh" 40 "Abnormalchargingcurrent" 39 "Thetemperaturedifferenceofthedischargeelectrodecolumnistoolarge" 38 "Thetemperaturedifferenceofthechargingpoleistoolarge" 37 "Overtemperatureofdischargeelectrodecolumn" 36 "Chargingpoleovertemperature" 35 "Thesupplyvoltageistoolow" 34 "SOCjump" 33 "Dischargeheatingovercurrent" 32 "Chargingandheatingovercurrent" 31 "Dischargeheatingtimeout" 30 "Chargeheatingtimeout" 29 "Dischargeheatingtemperaturedifferenceistoolarge" 28 "Thetemperaturedifferencebetweenchargingandheatingistoolarge" 27 "Dischargeheatingovertemperature" 26 "Chargingheatingovertemperature" 25 "Leakage" 24 "SOClow" 23 "SOChigh" 22 "Instantaneousdischargeovercurrent" 21 "Continuousdischargeovercurrent" 20 "feedbackovercurrent" 19 "Slowchargeovercurrent" 18 "Fastchargeovercurrent" 17 "Dischargetemperaturedifference" 16 "Chargingtemperaturedifference" 15 "dischargelowtemperature" 14 "Charginglowtemperature" 13 "dischargehightemperature" 12 "charginghightemperature" 11 "Dischargevoltagedifference" 10 "Chargingpressuredifference" 9 "Totaldischargepressure" 8 "Totalchargingpressure" 7 "Lowtotaldischargevoltage" 6 "Thetotalchargevoltageislow" 5 "Hightotaldischargevoltage" 4 "Totalchargingvoltageishigh" 3 "Lowvoltageofdischargecell" 2 "Lowvoltageofchargingunit" 1 "dischargecellhighvoltage" 0 "chargingunithighvoltage" ;
+VAL_ 518 SocStartDia_EmptyCalib 8 "Parameterreadingfailed" 7 "Calibrationdelayinprogress" 6 "Theaveragevoltageistoolow" 5 "Theaveragevoltageistoohigh" 4 "SOCistoolow" 3 "SOCistoohigh" 2 "Calibrationisnotreleased" 1 "Calibrationisnormal" 0 "Nottriggered" ;
+VAL_ 518 SocStartDia_FullCalib 8 "Parameterreadingfailed" 7 "Calibrationdelayinprogress" 6 "Theaveragevoltageistoolow" 5 "Theaveragevoltageistoohigh" 4 "SOCistoolow" 3 "SOCistoohigh" 2 "Calibrationisnotreleased" 1 "Calibrationisnormal" 0 "Nottriggered" ;
+VAL_ 544 OBC_Temperature 1 "Over-temperatureprotectionofcharger" 0 "normal" ;
+VAL_ 544 OBC_StartStatus 1 "Thebatteryvoltageisabnormalanditisnotallowedtostart" 0 "Thebatteryvoltageisnormalandcanbestarted" ;
+VAL_ 544 OBC_OutputShortOut 1 "Outputovercurrent,shortcircuit,chargerstopsworking" 0 "normal" ;
+VAL_ 544 OBC_InputVoltage 1 "Theinputvoltageiswrongandthechargerstopsworking" 0 "normal" ;
+VAL_ 544 OBC_HardwareFault 1 "Hardwarefailure" 0 "normal" ;
+VAL_ 544 OBC_CommunicateStatus 1 "Communicationcommandtimedoutorreceivedcommandexception" 0 "Communicationisnormal" ;
+VAL_ 849 BMS_RelayRefrigeFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayHeatingFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayDCChargeFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayACChargeFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayDischargeFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayPerchargeFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayNegativeFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayPositiveFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 849 BMS_RelayRefrigerationStatus 1 "closed" 0 "disconnect" ;
+VAL_ 849 BMS_RelayHeatingStatus 1 "closed" 0 "disconnect" ;
+VAL_ 849 BMS_RelayDCChargeStatus 1 "closed" 0 "disconnect" ;
+VAL_ 849 BMS_RelayACChargeStatus 1 "closed" 0 "disconnect" ;
+VAL_ 849 BMS_RelayDischargeStatus 1 "closed" 0 "disconnect" ;
+VAL_ 849 BMS_RelayPerchargeStatus 1 "closed" 0 "disconnect" ;
+VAL_ 849 BMS_RelayNegativeStatus 1 "closed" 0 "disconnect" ;
+VAL_ 849 BMS_RelayPositiveStatus 1 "closed" 0 "disconnect" ;
+VAL_ 864 NO7_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 864 NO7_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 864 NO7_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 864 NO6_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 864 NO6_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 864 NO6_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 864 NO5_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 864 NO5_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 864 NO5_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 864 NO4_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 864 NO4_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 864 NO4_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 864 NO3_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 864 NO3_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 864 NO3_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 864 NO2_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 864 NO2_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 864 NO2_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 864 NO1_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 864 NO1_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 864 NO1_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO15_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO15_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO15_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 865 NO14_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO14_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO14_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 865 NO13_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO13_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO13_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 865 NO12_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO12_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO12_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 865 NO11_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO11_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO11_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 865 NO10_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO10_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO10_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 865 NO9_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO9_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO9_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+VAL_ 865 NO8_RelayStatus 1 "closed" 0 "disconnect" ;
+VAL_ 865 NO8_RelayIndex 31 "reserved4" 30 "reserved3" 29 "reserved2" 28 "reserved1" 27 "uploadrelay" 26 "accessoryrelay" 25 "Airconditioningrelay" 24 "Slowchargeandnegativerelay" 23 "Slowchargepositiverelay" 22 "Fastchargenegativerelay" 21 "Fastchargepositiverelay" 20 "Chargenegativerelay" 19 "positivechargingrelay" 18 "Fanrelay3" 17 "Fanrelay2" 16 "Fanrelay1" 15 "Drycontactrelay3" 14 "Drycontactrelay2" 13 "Drycontactrelay1" 12 "Screenpowersupplyrelay" 11 "Buzzerrelay" 10 "Self-lockingrelay" 9 "DCDCrelay" 8 "Refrigerationrelay" 7 "heatingrelay" 6 "Fastchargerelay" 5 "Slowchargerelay" 4 "chargingrelay" 3 "Prechargerelay" 2 "dischargerelay" 1 "Mainnegativerelay" 0 "mainpositiverelay" ;
+VAL_ 865 NO8_RelayFaultStatus 3 "Drivecircuitfailure" 2 "Opencircuitfault" 1 "adhesionfailure" 0 "normal" ;
+
