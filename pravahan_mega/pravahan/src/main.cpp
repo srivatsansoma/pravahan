@@ -119,8 +119,8 @@ void loop() {
   for (int i = 0; i < 6; i++) local[i] = pwm_time_period_high[i];
   Serial.print("/.");
   for (int i = 0; i < 6; i++){
-     Serial.print(local[i]);
-     Serial.print(" ");
-    };
+    Serial.print(local[i]);
+    Serial.print(" ");
+  };
   Serial.println(".\\");
 }
