@@ -6,8 +6,8 @@ import numpy
 import threading
 
 serial_port = serial.Serial(
-	baud_rate = 115200,
-	port = "/dev/ttyACM0",
+	"/dev/ttyACM0",
+	115200,
 	timeout=5
 )
 
@@ -20,28 +20,18 @@ start_time = time.time()
 
 lps_ratio = 0.9
 
-data = plt.plot([], [])
-
 def collect_data():
 	while(is_running):
 		
-		if serial_port.is_waiting() > 0:
-			line = serial_port.readline()
-			line = serial_port.readline()
-			if line[0:2]=="/." and line[-2:]==".\\":
-				line = line[2:-3]
-				signal = []
-				temp = ""
-				for i in line:
-					if i != " ":
-						signal.append(int(temp))
-					else:
-						temp += i
-				radio.append([signal, time.time()-start_time])
-
+		if serial_port.in_waiting > 0:
+			line = serial_port.readline().decode("utf-8")
+			if line[0:2] == "//":
+				line = line[2:-4]
+				signals = [int(x) for x in line.split()]
+				radio.append([signals, time.time() - start_time])
+				print(signals)
 			else:
-				if distance != []:
-					distance.append(int(line)*lps_ratio + distance[-1]*(1-lps_ratio))
+				distance.append([int(line). time.time() - start_time])
 
 def plot_data():
 	data.set_xdata([i[1] for i in distance])
@@ -50,11 +40,7 @@ def plot_data():
 	time.sleep(0.1)
 
 if __name__ == "__main__":
-	collect_data_thread = threading.Thread(collect_data)
-	plot_data_thread = threading.Thread(plot_data)
+	collect_data_thread = threading.Thread(target = collect_data)
 
+	collect_data_thread.start()
 	collect_data_thread.join()
-	plot_data_thread.join()
-
-	collect_data_thread.join()
-	plot_data_thread.join()
